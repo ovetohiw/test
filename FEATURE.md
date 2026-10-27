@@ -108,4 +108,4 @@
 
 Краткая запись прошлых фич. Активное ТЗ живёт только в секции «Текущая фича».
 
-- 
+- ID 1 MVP интернет-магазина телефонов — готово 2026-10-27. Playwright e2e catalog→order→stub ЮKassa passed; health UP; unit backend/frontend green. План: docs/exec-plans/completed/2026-10-27-ecommerce-phones-mvp/

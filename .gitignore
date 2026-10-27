@@ -1,0 +1,17 @@
+.env
+.env.local
+*.log
+.DS_Store
+.idea/
+.vscode/
+**/node_modules/
+**/.next/
+**/out/
+**/build/
+**/dist/
+backend/.gradle/
+backend/bin/
+backend/uploads/
+frontend/test-results/
+frontend/playwright-report/
+frontend/blob-report/
