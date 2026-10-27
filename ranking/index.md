@@ -31,7 +31,7 @@
 | Frontend (Next.js) | B | proxy rewrite к API | B | мало component tests | 2026-10-27 |
 | Backend API (Spring) | B | модули по доменам | B | admin 401→403 фильтр-workaround | 2026-10-27 |
 | Persistence (JPA/Flyway) | B | миграции V1/V2 | B | фильтры каталога в сервисе | 2026-10-27 |
-| Infrastructure (Compose) | C | postgres ok | B | full compose app images не прогнаны end-to-end | 2026-10-27 |
+| Infrastructure (Compose) | B | full stack healthy, UI :8080, Java 17 | B | e2e по-прежнему против dev :3000 | 2026-10-27 |
 
 ## История изменений
 
@@ -42,3 +42,4 @@
 - Понижены: —
 - Новые выявленные пробелы: e2e Playwright на low-RAM; live ЮKassa не гонялась
 - Закрытые пробелы: отсутствие стэка и каркаса приложения
+- 2026-10-27: полный Compose прогнан (postgres + backend Temurin 17 + frontend). Слой Infrastructure C → B. Health UP, каталог и логин на :8080, unit green. Пробел: Playwright не гонялся против Compose.

@@ -1,0 +1,8 @@
+.gradle
+build
+.git
+.gitignore
+*.md
+.DS_Store
+*.log
+uploads

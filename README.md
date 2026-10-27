@@ -8,8 +8,12 @@ MVP интернет-магазина телефонов.
 
 ## Быстрый старт
 
+Полный стек: `docker compose up --build -d`. Магазин: http://localhost:8080. Health: `curl http://localhost:8080/actuator/health`.
+
+Локальная разработка без контейнеров приложения (не вместе с полным Compose — оба занимают :8080):
+
 1. Поднять БД: `docker compose up -d postgres`
-2. Backend: `cd backend && ./gradlew.bat bootRun` (health: http://localhost:8080/actuator/health)
+2. Backend: `cd backend && ./gradlew.bat bootRun` (API: http://localhost:8080)
 3. Frontend: `cd frontend && pnpm install && pnpm dev` (http://localhost:3000)
 
 Seed-пользователи (local): `admin@phoneshop.local` / `Password123!`, `buyer@phoneshop.local` / `Password123!`.
@@ -25,4 +29,4 @@ Seed-пользователи (local): `admin@phoneshop.local` / `Password123!`,
 ## Документы агента
 
 - [FEATURE.md](FEATURE.md), [PROGRESS.md](PROGRESS.md), [AGENTS.md](AGENTS.md)
-- Exec plan: [docs/exec-plans/inprogress/2026-10-27-ecommerce-phones-mvp/](docs/exec-plans/inprogress/2026-10-27-ecommerce-phones-mvp/)
+- Exec plan: [docs/exec-plans/completed/2026-10-27-docker-full-stack-8080/](docs/exec-plans/completed/2026-10-27-docker-full-stack-8080/)

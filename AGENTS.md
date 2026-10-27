@@ -14,9 +14,10 @@
 
 ## Тест работоспособности приложения
 
-- Поднять приложение: `docker compose up -d postgres`; backend `.\gradlew.bat bootRun` или `java -Xmx384m -jar build\libs\backend-0.0.1-SNAPSHOT.jar`; frontend для разработки `pnpm dev`, для e2e на weak RAM — `pnpm build && pnpm start`
-- Прогнать тесты: backend `.\gradlew.bat test`; frontend `pnpm test`; e2e `pnpm test:e2e` (при поднятых app)
-- Верификация: `curl http://localhost:8080/actuator/health` → UP; `pnpm test`, `.\gradlew.bat test`, `pnpm test:e2e` зелёные
+- Поднять приложение: `docker compose up --build -d` (postgres + backend + frontend). Страница: http://localhost:8080. Health через тот же origin: `curl http://localhost:8080/actuator/health`
+- Локальная разработка без контейнеров приложения: `docker compose up -d postgres`; backend `.\gradlew.bat bootRun` или `java -Xmx384m -jar build\libs\backend-0.0.1-SNAPSHOT.jar` (API :8080); frontend `pnpm dev` (страница :3000). Этот путь не совмещается с полным Compose: оба хотят :8080 на хосте
+- Прогнать тесты: backend `.\gradlew.bat test`; frontend `pnpm test`; e2e `pnpm test:e2e` (при поднятом dev-пути, страница на :3000)
+- Верификация полного стека: `curl http://localhost:8080/actuator/health` → UP; `pnpm test`, `.\gradlew.bat test` зелёные; каталог и логин на http://localhost:8080
 
 ## Defenition of Done
 

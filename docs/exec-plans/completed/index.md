@@ -7,3 +7,4 @@
 ## Список
 
 - [2026-10-27-ecommerce-phones-mvp](./2026-10-27-ecommerce-phones-mvp/) — MVP интернет-магазина телефонов (FEATURE ID 1), DoD закрыт 2026-10-27
+- [2026-10-27-docker-full-stack-8080](./2026-10-27-docker-full-stack-8080/) — полный Compose, страница :8080, backend Java 17 (FEATURE ID 2), DoD закрыт 2026-10-27
